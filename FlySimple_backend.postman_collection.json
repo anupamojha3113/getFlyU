@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "5db2388c-2a93-4861-84e6-cd9693e5d08c",
+		"name": "FlySimple_backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26116850"
+	},
+	"item": [
+		{
+			"name": "create a user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Prithvi@email.com\",\r\n    \"password\":\"1\",\r\n    \"confirmPassword\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fly-simple.vercel.app/api/user/create",
+					"protocol": "https",
+					"host": [
+						"fly-simple",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find flights",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5MjUxODkyZjg1YjgyNDFjYmJiZjYiLCJlbWFpbCI6IlByaXRodmlAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkUldFVm5VUnNpcFlLYzJzZ09yT2gzZWQxaHdJRHlMdGVKQ2wvUFJQMXhmUmNNdGlrZExzMmkiLCJyb2xlIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMDhUMTY6MzY6NDAuMDc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDUtMDhUMTY6MzY6NDAuMDc2WiIsIl9fdiI6MCwiaWF0IjoxNjgzNzgyNDcyLCJleHAiOjE2ODQyODI0NzJ9.rzJpc2rqABNcUVWEOdXh3TsZfD_pikR9XBkw51JzovY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fly-simple.vercel.app/api/flights/tariff/ATQ/CCU/2023-05-20",
+					"protocol": "https",
+					"host": [
+						"fly-simple",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"flights",
+						"tariff",
+						"ATQ",
+						"CCU",
+						"2023-05-20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user session",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"Prithvi@email.com\",\r\n     \"password\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fly-simple.vercel.app/api/user/create-session",
+					"protocol": "https",
+					"host": [
+						"fly-simple",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"user",
+						"create-session"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDU5MjUxODkyZjg1YjgyNDFjYmJiZjYiLCJlbWFpbCI6IlByaXRodmlAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkUldFVm5VUnNpcFlLYzJzZ09yT2gzZWQxaHdJRHlMdGVKQ2wvUFJQMXhmUmNNdGlrZExzMmkiLCJyb2xlIjoidXNlciIsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMDhUMTY6MzY6NDAuMDc2WiIsInVwZGF0ZWRBdCI6IjIwMjMtMDUtMDhUMTY6MzY6NDAuMDc2WiIsIl9fdiI6MCwiaWF0IjoxNjgzNzc5OTM1LCJleHAiOjE2ODM3ODA0MzV9.0x9acoBo7ToTbNfSIzwWW-0AjHbyjNaoUNYWWyF_BMI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://fly-simple.vercel.app/api/user/delete-session",
+					"protocol": "https",
+					"host": [
+						"fly-simple",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"api",
+						"user",
+						"delete-session"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
